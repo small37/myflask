@@ -82,6 +82,8 @@ class Task_list(db.Model):
 
 @app.route('/')
 def index():
+    a = "3333"
+    print('sssss' + a)
     # Task_account().getonline_rooms()
     # sync_ac_task()
     # unquest_key('@timeout')  # 定期释放超时账号
@@ -268,4 +270,4 @@ if __name__ == '__main__':
     p.start()  # 定式任务进程
     # handler = logging.FileHandler('flask.log')
     # app.logger.addHandler(handler)
-    app.run('0.0.0.0', 88)
+    app.run('0.0.0.0', 88, debug=True)
